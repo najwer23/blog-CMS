@@ -1,0 +1,56 @@
+{% extends 'base-client.html.twig' %}  
+
+{% block title %}Blog - {{topic}}{% endblock %}
+
+{% block stylesheets %}
+<link href="{{ asset('CSS/posts/post-base.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block javascripts %}{% endblock %}
+
+
+
+
+{% block body %}
+
+  <div class="container-post">
+    <section class="post">
+        
+        <div class="hits"><h6><i class="far fa-eye"></i> {{hits}}</h6></div>
+        <div class="post-title"><h3>{{topic}}</h3></div>
+        <div class="post-author">
+          <h5>
+
+            {% if authors|length > 1 %} 
+              <i class="fas fa-users"></i>
+            {% endif %}
+
+            {% if authors|length == 1 %} 
+              <i class="fas fa-user-tie"></i>
+            {% endif %}
+            
+            {% for author in authors %}
+               {{ author.name }},
+            {% endfor %}  
+            
+
+            {{date|date("d.m.Y", "Europe/Berlin")}} 
+            {% if date.diff( date("now") ).format('%a') == 0  %}
+              (dzisiaj)
+            {% elseif date.diff( date("now") ).format('%a') == 1 %}
+              (wczoraj)
+            {% else %}
+              ({{date.diff( date("now") ).format('%a')}} dni temu)
+            {% endif %}
+          </h5>
+        </div>
+        
+        {% include path %}
+
+
+    </section>
+  </div>
+
+{% endblock %}
+
+

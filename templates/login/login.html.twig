@@ -1,0 +1,54 @@
+{% extends 'base-client.html.twig' %}  
+
+ {% block title %}Login{% endblock %}
+
+{% block stylesheets %}
+<link href="{{ asset('CSS/login/login.css') }}" rel="stylesheet" />
+{# <link href="{{ asset('CSS/contact/contact.css') }}" rel="stylesheet" /> #}
+
+{% endblock %}
+
+{% block javascripts %}
+{# <script src="{{ asset('JS/AJAX/search/getTitles.js') }}"></script>
+<script src="{{ asset('JS/search/searchAutocomplate.js') }}"></script> #}
+{% endblock %}
+
+
+{% block body %}
+
+<div class="flexContainer">
+    <div class="leftRec">
+        <div class="loginForm">
+            <h2> Zaloguj się! </h2>
+            
+            {# <div class="error">mdfdfdfdfa</div> #}
+            
+            <label>
+              <div class="iconWithInput">
+                <div class="icon-ph"><i class="fas fa-user-lock"></i></div>
+                <input type="email" placeholder="Adres Email" class="a" required>
+              </div>
+            </label>
+
+
+            <label>
+              <div class="iconWithInput">
+                <div class="icon-ph"><i class="fas fa-key"></i></div>
+                <input type="password" placeholder="Hasło" class="a" required>
+              </div>
+            </label>
+            
+            <button type="button" id="submitMail" class="btn fourth">Wyślij</button>
+
+            <div class="link"><a href="/">Zapomniałem hasła</a></div>
+            <div class="link"><a href="/">Załóż konto</a></div>
+          
+            
+        </div>
+    </div>
+    <div class="rightRec">
+        <img class="picture" src="IMG/desert.png"></img>
+    </div>
+</div>
+
+{% endblock %}

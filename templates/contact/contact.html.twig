@@ -1,0 +1,78 @@
+{% extends 'base-client.html.twig' %}  
+
+{% block title %}Kontakt{% endblock %}
+
+{% block stylesheets %}
+<link href="{{ asset('CSS/contact/contact.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block javascripts %}
+<script src="{{ asset('JS/AJAX/mail/contacMailForm.js') }}"></script>
+{% endblock %}
+
+
+{% block body %}
+
+ 
+    <section class="contact">
+
+        <div class="flexContact">
+           
+           
+            <div class="myAdress">
+                <div class="contactInfo">
+                  <p class="contactInfoP">Mój Adres</p>
+                  <p><i class="fas fa-map-pin"></i> Radosna 56/8, 53-332 Wrocław</p>
+                  <p><i class="fas fa-phone"></i> (+48) 512 - 444 - 567</p>
+                  <p><i class="fas fa-at"></i> wspaniala23@gmail.com</p>
+                  <img src="IMG/aa.png">
+               </div>
+            </div>
+
+
+
+
+            <div class="sendMeEmail">
+                <form>
+                     <p>Napisz do mnie!<p>
+
+                <label>
+                  <div class="icon-ph"><i class="far fa-user-circle"></i></div>
+                  <input class="custom-text" type="text" name="name" placeholder="Imię" required> <br>
+                </label>
+
+                <label>
+                  <div class="icon-ph"><i class="far fa-user-circle"></i></div>
+                  <input class="custom-text" type="text" name="surname" placeholder="Nazwisko" required> <br>
+                </label>
+
+                <label>
+                  <div class="icon-ph"><i class="far fa-star"></i></div>
+                  <input class="custom-text" type="text" name="topic" placeholder="Temat" required> <br>
+                </label>
+
+                <label>
+                  <div class="icon-ph"><i class="far fa-envelope-open"></i></div>
+                  <input class="custom-text" type="email" name="email" placeholder="Adres Email" required> <br>
+                </label>
+
+                <label>
+                  <textarea placeholder="Twoja wiadomość" id="text" type="text" name="text" required></textarea><br>
+                </label>
+
+                <button type="button" id="submitMail" class="btn fourth">Wyślij</button>
+                <div class="animation"><i class="fas fa-spinner"></i></div>
+                <div class="animation2">Proszę czekać...</div>
+                <div id="c"></div>
+                </form>
+            </div>
+        </div>
+
+        
+       
+    </section>
+ 
+
+{% endblock %}
+
+

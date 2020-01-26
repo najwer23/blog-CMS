@@ -1,0 +1,26 @@
+{% extends 'base-client.html.twig' %}  
+
+{% block title %}Quotes{% endblock %}
+
+{% block stylesheets %}
+<link href="{{ asset('CSS/quotes/quotes.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block javascripts %}
+<script> window.FontAwesomeConfig = {searchPseudoElements: true} </script>
+{% endblock %}
+
+{% block body %}
+
+<section>
+    <ul class="quotes">
+        {% for quote in quotes %}
+            <li>
+                <p class="quote">{{quote.quote}}</p>
+                <p class="author">{{quote.author}}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</section>
+
+{% endblock %}

@@ -1,0 +1,19 @@
+{# templates/bundles/TwigBundle/Exception/error404.html.twig #}
+{% extends 'base-client.html.twig' %}
+
+{% block stylesheets %}
+<link href="{{ asset('CSS/error/error.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block body %}
+
+    <section class="error">
+    <h1>Strona nie istnieje</h1>
+
+    <img src="/../../../../../IMG/taken.png">
+    <p>
+       <a href="{{ path('main') }}">Strona główna</a>
+    </p>
+
+    </section>
+{% endblock %}

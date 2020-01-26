@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="PL">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="Author" content="Mariusz Najwer" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Blog podróżniczy" />
+        <meta name="keywords" content="Mariusz Najwer" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        
+      
+        <link rel="shortcut icon" href="{{ asset('Icons/icon.png')}}">
+        <link href="{{ asset('JS/fontawesome/css/all.css') }}" rel="stylesheet" />   
+        <link href="{{ asset('CSS/nav.css') }}" rel="stylesheet" />
+        <link href="{{ asset('CSS/footer.css') }}" rel="stylesheet" />   
+        
+        <style>img[alt*="www.000webhost.com"] {display: none;}</style>
+       
+        <title>{% block title %}{% endblock %}</title>
+
+        {% block stylesheets %}{% endblock %}
+
+        {# <script src="{{ asset('JS/jQuery/jQuery-1.12.4min/jQuery-1.12.4min.js') }}"></script> #}
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+        <script src="{{ asset('JS/jQuery/nav/nav.js') }}"></script>
+
+        {% block javascripts %}{% endblock %}
+    </head>
+    <body>
+        <div class="fat-nav">
+            <div class="wrapper">
+                    <ul>
+                        <a class="fat-nav-link" href="/"><li><i class="fas fa-home"></i> Start</li></a>
+                        <a class="fat-nav-link" href="/archives"><li><i class="fas fa-archive"></i> Archiwum</li></a>
+                        <a class="fat-nav-link" href="/quotes"><li><i class="fas fa-quote-right"></i> Cytaty</li></a>
+                        <a class="fat-nav-link" href="/about"><li><i class="fas fa-info"></i> O mnie</li></a>
+                        <a class="fat-nav-link" href="/random"><li><i class="fas fa-random"></i> Losuj</li></a>
+                        <a class="fat-nav-link" href="/search"><li><i class="fas fa-search"></i> Szukaj</li></a>
+                        <a class="fat-nav-link" href="/contact"><li><i class="fas fa-at"></i> Kontakt</li></a>
+                        <a class="fat-nav-link" href="/login"><li><i class="fas fa-sign-in-alt"></i> Zaloguj się</li></a>
+                    </ul>
+            </div>
+        </div>
+
+        <nav>
+            <ul class="title" id="top">
+            <li><a href="/"><b>Mariusz Najwer / {{ pageName|default("error") }}</b></a></li>
+            </ul>
+
+            <ul class="logo">
+            <div class="box">
+                <img src="{{ asset('Icons/fish.svg') }}">
+            {# <span style=""><i>Ryba bez wody?!</i></span> #}
+            </div>
+            </ul>
+
+            <ul class="social">
+            <li><a class="fb" href="https://www.facebook.com/profile.php?id=100006447601968" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a class="g" target="_blank" href="https://plus.google.com/+MariuszNajwer23"><i class="fab fa-google-plus-g"></i></a></li>
+            <li><a class="lin" target="_blank" href="https://www.linkedin.com/in/najwer23/"><i class="fab fa-linkedin"></i></a></li>
+            <li><a class="twit" target="_blank" href="https://twitter.com/najwer23"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+        </nav>
+
+
+
+        {% block body %}{% endblock %}
+
+
+        <div class="push"></div>
+        <footer>
+            <div class="footer-flex">
+                <div class="footer-laws">&copy; 2018 Mariusz Najwer. Wszystkie prawa zastrzeżone </div>
+                <div class="rocket"><a class="rocketLink" href="#top"><i class="fas fa-rocket"></i></a></div>
+            </div>
+            <div class="ad"></div>
+        </footer>
+
+        <script src="{{ asset('JS/jQuery/nav/showNav.js') }}"></script>
+
+    </body>
+</html>

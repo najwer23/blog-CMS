@@ -1,0 +1,27 @@
+
+
+.error {
+    text-align: center;
+    margin-top: 75px;
+    margin-bottom: 50px;
+}
+
+.error img{
+    width: 300px;
+    height: auto;
+}
+
+.error a{
+    color: crimson;
+    text-decoration: none;
+}
+
+.error a:hover{
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 500px) {
+    .error{
+        margin-top: 50px;
+    }
+}

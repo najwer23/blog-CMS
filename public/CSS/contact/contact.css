@@ -1,0 +1,279 @@
+.contact h1 {
+    
+    text-align: center;
+    color: #7F7F7F;
+}
+
+.flexContact {
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+}
+
+.myAdress, .sendMeEmail{
+   margin-top: 30px;
+   width: 500px;
+   /* background: red; */
+   text-align: center;
+   /* padding-left: 20px; */
+}
+
+.myAdress img {
+    width: 500px;
+    height: auto;
+}
+
+
+.contactInfo p {
+    margin-top: 0;
+    font-weight: lighter;
+    color: #7F7F7F
+}
+
+.sendMeEmail p,
+.contactInfo .contactInfoP {
+    color: #FF5856;
+    margin-top: 0;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.sendMeEmail input[type="text"],
+.sendMeEmail input[type="email"] {
+    height: 48px;
+    width: 278px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    outline: none;
+    background-color: transparent;
+    border: solid;
+    border-width: 1px;
+    border-color: #FF5856;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+
+.sendMeEmail input[type="email"]::placeholder,
+input[type="text"]::placeholder,
+.sendMeEmail textarea::placeholder {
+    color: #7F7F7F;
+}
+
+.icon-ph {
+    display: inline-block;
+    padding-left: 12px;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 50px;
+    position: absolute;
+    z-index: 3;
+    color: #7F7F7F;
+}
+
+.custom-text {
+    padding-left: 40px;
+}
+
+.sendMeEmail textarea[type="text"]:focus,
+.sendMeEmail input[type="email"]:focus,
+input[type="text"]:focus {
+    border: 1px solid #FF5856;
+    /* color: white; */
+}
+
+.sendMeEmail textarea[type="text"] {
+    margin-right:5px;
+    color: #7F7F7F;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    border: solid;
+    padding: 12px;
+    border-width: 1px;
+    max-width: 286px;
+    min-width: 286px;
+    resize: both;
+    min-height: 100px;
+    max-height: 600px;
+    margin-bottom: 10px;
+    outline: none;
+    background-color: transparent;
+}
+
+.btn {
+    margin-right: 5px;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: transparent;
+    border: 2px solid #e74c3c;
+    color: #e74c3c;
+    cursor: pointer;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    padding: 1.2em 2.8em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.btn:focus {
+    color: #FF5856;
+    /* background-image: linear-gradient(45deg, #FF5856 50%, transparent 50%); */
+    outline: 0;
+    border-bottom: 3px solid #FF5856;
+}
+
+.btn:hover{
+    color: white;
+    outline: 0;
+}
+
+.fourth {
+    width: 312px;
+    border-color: #FF5856;
+    color: #FF5856;
+    background-image: linear-gradient(45deg, #FF5856 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    transition: background 300ms ease-in-out;
+}
+
+.fourth:hover {
+    background-position: 0;
+}
+
+
+
+
+
+
+#c{
+    width: 316px;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+
+
+.msgSent {
+   
+    margin-top: 15px;
+    background-color: #3D873F;
+    color: white;
+    padding: 10px;
+    width: 292px;
+   
+}
+
+.msgWrongEmail {
+    margin-top: 15px;
+    background-color: #E07444;
+    color: white;
+    padding: 10px;
+    width: 292px;
+}
+
+.animation2 {
+    margin-left: -150px;
+    margin-top: 15px;
+    color: #82ABC6;
+    display: none;
+}
+
+.animation {
+    margin-left: -45px;
+    width: 292px;
+    margin-top: 15px;
+    color: #82ABC6;
+    display: none;
+    -webkit-animation: spin 2s linear infinite;
+    -moz-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    position: absolute;
+}
+
+
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+
+@media screen and (max-width: 1100px) {
+    .flexContact {
+        width: 100%;
+    }
+}
+
+
+
+@media screen and (max-width: 620px) {
+
+    .flexContact {
+        margin-top: 50px;
+        width: 100%;
+    }
+
+    .myAdress img {
+        width: 300px;
+        height: auto;
+    }
+
+     .sendMeEmail input[type="text"],
+     .sendMeEmail input[type="email"] {
+        width: 240px;
+    }
+
+    .sendMeEmail textarea[type="text"] {
+        min-width: 256px;
+    }
+
+    .fourth {
+        width: 282px;
+    }
+
+    .animation{
+       width: 280px;
+       margin-left: -96px;
+    }
+
+    .animation2{
+        margin-left: -120px;
+    }
+
+    #c{
+        width: 286px;
+    }
+
+    .msgSent, .msgWrongEmail{
+        width: 260px;
+    }
+
+
+
+}

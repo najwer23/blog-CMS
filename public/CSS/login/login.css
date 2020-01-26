@@ -1,0 +1,223 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+.flexContainer{
+    min-height: calc(100vh - 180px);
+    /* background: red; */
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+
+    margin-top: 50px;
+    margin-bottom: 100px;
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.leftRec, .rightRec{
+    width: 500px;
+    margin: auto;
+    /* background: yellow; */
+}
+
+.rightRec {
+    text-align: center;
+}
+
+.picture {
+    width: 500px;
+    height: auto;
+}
+
+.loginForm{ 
+    /* background: blue; */
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.loginForm h2 {
+    color: cornflowerblue;
+}
+
+
+
+
+
+
+
+.iconWithInput .icon-ph {
+    display: inline-block;
+    padding-left: 12px;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 50px;
+    position: absolute;
+    z-index: 3;
+    color: #7F7F7F;
+}
+
+
+.loginForm input[type="text"],
+.loginForm input[type="password"],
+.loginForm input[type="email"] {
+    width: 255px;
+    height: 48px;
+    border: solid;
+    border-width: 1px;
+    border-color:cornflowerblue;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    padding-left: 45px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    
+  
+}
+
+.loginForm input[type="email"]::placeholder,
+.loginForm input[type="password"]::placeholder,
+.loginForm input[type="text"]::placeholder {
+    color: #7F7F7F;
+} 
+
+.loginForm input[type="email"]:focus,
+.loginForm input[type="password"]:focus,
+.loginForm input[type="text"]:focus {
+    border: 1px solid cornflowerblue; 
+}
+
+
+
+
+
+
+
+.btn {
+  
+    background-color: transparent;
+    border: 1px solid cornflowerblue;
+    color: cornflowerblue;
+    cursor: pointer;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.btn:focus {
+    color: cornflowerblue;
+    /* background-image: linear-gradient(45deg, #FF5856 50%, transparent 50%); */
+    outline: 0;
+    border-bottom: 2px solid cornflowerblue;
+}
+
+.btn:hover {
+    color: white;
+    outline: 0;
+}
+
+.fourth {
+    height: 50px;
+    width: 302px;
+    border-color: cornflowerblue;
+    color: cornflowerblue;
+    background-image: linear-gradient(45deg, cornflowerblue 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    transition: background 300ms ease-in-out;
+}
+
+.fourth:hover {
+    background-position: 0;
+}
+
+.link a{
+    display: block;
+    height: 50px;   
+    width: 302px;
+    background: #ADC5F0;
+    text-decoration: none;
+    line-height: 50px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    color: #fff;
+    font-weight:bold;
+}
+
+.link a:hover{
+    background: cornflowerblue;
+     -webkit-transition: opacity 0.3s;
+     -moz-transition: opacity 0.3s;
+     -ms-transition: opacity 0.3s;
+     -o-transition: opacity 0.3s;
+     transition: opacity 0.3s;
+     transition: all .2s ease-in-out;
+}
+
+
+
+
+
+
+
+.error {
+    margin-top: 15px;
+    /* text-align: center; */
+    width: 302px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1000px) {
+    .leftRec,
+    .rightRec {
+        width: 100%;
+    }
+
+    .rightRec{
+        display: none;
+    }
+
+    .flexContainer{
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+
+   
+}
+
+@media screen and (max-width: 500px) {
+    .loginForm {
+        width: 320px;
+    }
+
+    
+}

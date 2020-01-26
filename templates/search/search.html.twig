@@ -1,0 +1,63 @@
+{% extends 'base-client.html.twig' %}
+
+{% block title %}Szukaj na blogu!{% endblock %}
+
+{% block stylesheets %}
+<link href="{{ asset('CSS/search/search.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block javascripts %}
+<script src="{{ asset('JS/AJAX/search/getTitles.js') }}"></script>
+<script src="{{ asset('JS/search/searchAutocomplate.js') }}"></script>
+{% endblock %}
+
+
+
+{% block body %}
+
+<section class="searchSection">
+  
+  <div class="searchForm">
+  <h1>CZEGO SZUKASZ?</h1>
+  
+    <form autocomplete="off" action="/search-results" method="GET">
+      <div class="autocomplete" >
+        <input id="inputSearch" name="search" type="text" placeholder="Szukaj na blogu...">
+      </div>
+
+      <button type="submit">
+        <i class="fas fa-search"></i>
+      </button>
+      
+    </form>
+  </div>
+
+</section>
+
+<section class="search-results">
+  {% if g == "Y" %}
+    <h3>Wyniki wyszukiwania</h3>
+    <ol class="search-posts"> 
+    
+    
+      {% for post in posts %}
+        <li>  <a class="link-title" href="{{ path('posts', {'slug': post.id}) }}">{{ post.topic }} </a></li>
+      {% endfor %}
+   
+    </ol>
+  {% endif %}
+
+  {% if g == "F" %}
+    <h4>Uups.. Nie udało się znaleźć pożadanego rezultatu <i class="far fa-sad-tear fa-lg"></i></h4>
+  {% endif %}
+  
+
+</section>
+
+<script>
+/*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+{# availableTags - tablica tytulow #}
+autocomplete(document.getElementById("inputSearch"),  availableTags);
+</script>
+
+{% endblock %}

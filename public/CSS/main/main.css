@@ -1,0 +1,95 @@
+body{
+    color: rgb(46, 46, 46);
+}
+
+.container{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.post {
+    line-height: 1.5;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 0;
+    padding-right: 0;
+    list-style-type: none;
+    margin: 0;
+}
+
+.post li{
+    padding-right: 25%;
+    padding-left: 25%;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+      -webkit-transition: background-color 0.3s ease-out;
+      -moz-transition: background-color 0.3s ease-out;
+      -o-transition: background-color 0.3s ease-out;
+      transition: background-color 0.3s ease-out;
+}
+
+.post li:hover{
+    border-bottom: 1px solid rgb(218, 218, 218);
+    border-top: 1px solid rgb(218, 218, 218);
+    background-color: rgb(253, 253, 253)
+}
+
+.link-title{
+    /* color: #A282C6; */
+    color: #7F7F7F;
+    margin-top: 0;
+    padding-top: 0;
+    text-decoration: none;
+}
+
+.link-title:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.link-text, .author{
+    font-size: 14px;
+    color: #C6A678;
+    text-decoration: none;
+    /* font-size: 20px; */
+}
+
+.link-text:hover{
+    text-decoration: underline;
+}
+
+.before-title{
+    font-size: 14px;
+    color: #529365;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .post li {
+        padding-right: 18%;
+        padding-left: 18%;
+        padding-top: 20px;
+        padding-bottom: 45px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .post li {
+        padding-right: 12%;
+        padding-left: 12%;
+        padding-top: 20px;
+        padding-bottom: 45px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .post li {
+        padding-right: 5%;
+        padding-left: 5%;
+        padding-top: 15px;
+        padding-bottom: 35px;
+    }
+}

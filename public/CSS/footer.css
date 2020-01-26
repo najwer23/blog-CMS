@@ -1,0 +1,86 @@
+html{
+  height: 100%;
+}
+
+body {
+   min-height:100%;
+   position:relative;
+ }
+
+ .push{
+   padding-bottom: 120px;
+ }
+
+ .ad{
+   line-height: 15px;
+   height: 20px;
+   background: black;
+ }
+
+ footer {
+   bottom:0;
+   position:absolute;
+   min-height: 120px;
+   width: 100%;
+   background-color: rgb(36, 39, 43);
+   line-height: 100px;
+ }
+
+.footer-flex{
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: flex-start;
+}
+
+.footer-laws{
+  color: whitesmoke;
+  font-size: 14px;
+}
+
+.rocketLink{
+  color: white;
+  font-size: 25px;
+  -webkit-transition: color .5s ease-out;
+  -moz-transition: color .5s ease-out;
+  -o-transition: color .5s ease-out;
+  transition: color .5s ease-out;
+}
+
+.rocketLink:hover{
+  color: gold;
+  
+}
+
+.rocket{
+   -ms-transform: rotate(-45deg);
+   /* IE 9 */
+   -webkit-transform: rotate(-45deg);
+   /* Safari */
+   transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 500px) {
+  footer{
+    line-height: normal;
+    padding-bottom: 0px;
+    padding-top: 10px;
+  }
+
+  .ad{
+    margin-top: 20px;
+    height: 30px;
+  }
+
+  .push{
+    padding-bottom: 130px;
+  }
+
+  .footer-laws{
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+  }
+}

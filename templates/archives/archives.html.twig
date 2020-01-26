@@ -1,0 +1,41 @@
+{% extends 'base-client.html.twig' %}  
+
+{% block title %}Archiwum{% endblock %}
+
+{% block stylesheets %}
+<link href="{{ asset('CSS/archives/archives.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block javascripts %}
+<script> window.FontAwesomeConfig = {searchPseudoElements: true} </script>
+{% endblock %}
+
+
+{% block body %}
+
+  <div class="container">
+    <section class="archives">
+        <h1> <i class="fas fa-monument"></i> Archiwum </h1>
+        <ul class="post"> 
+            {% set foo = "" %}
+            {% for post in posts %}
+               
+                {% if post.date|date("Y") != foo %}
+                    {% set foo = post.date|date("Y") %}
+                    <h2> {{post.date|date("Y")}} </h2>
+                {% endif %}
+               
+                <li>
+                    <p class="timeAndTitle">
+                        {# <i class="far fa-clock"></i> {{ post.date|date("d.m", "Europe/Berlin") }}   #}
+                        <a class="link-title" href="{{ path('posts', {'slug': post.id}) }}">{{ post.topic }} </a>
+                    </p>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+  </div>
+
+{% endblock %}
+
+
